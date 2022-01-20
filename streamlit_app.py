@@ -1,6 +1,7 @@
 import numpy as np
-import pandas as ps
+import pandas as pd
 import streamlit as st
+
 feature_importance = pd.DataFrame(
     {
         "Number of credits passed": 0.20,
