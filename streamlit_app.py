@@ -43,7 +43,7 @@ feature_importance = pd.DataFrame({
 feature_importance.sort_values(by = ['Importance'], inplace = True)
 x_labels = np.linspace(start = 0, stop = 0.2, num = 5, endpoint=True)
 
-feat_fig = plt.figure(facecolor="#F4F4F4")
+feat_fig = plt.figure()
 ax = feat_fig.add_subplot(1,1,1)
 ax.set_xticks(x_labels)
 ax.set_facecolor("#F4F4F4")
@@ -70,7 +70,7 @@ In our risk calculator widget to the right, you see the most important variables
     )
     st.markdown("## <span style='color:#410464'>Feature Importance </span>", unsafe_allow_html=True)
     st.write("Feature Importance refers to techniques that calculate a score for all the input features (variables) for a given model — the scores simply represent the “importance” of each feature. A higher score means that the specific feature will have a larger effect on the model that is being used to predict the risk.")
-    st.pyplot(fig = feat_fig)
+    st.pyplot(fig = feat_fig, facecolor="#F4F4F4")
 
 with col2:
     st.text_input("Age", 18, 3)
