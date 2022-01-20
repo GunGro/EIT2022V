@@ -68,7 +68,7 @@ In our risk calculator widget to the right, you see the most important variables
 """
     )
     st.markdown("## Feature Importance")
-    st.write("Feature Importance refers to techniques that calculate a score for all the input features for a given model — the scores simply represent the “importance” of each feature. A higher score means that the specific feature will have a larger effect on the model that is being used to predict the risk.")
+    st.write("Feature Importance refers to techniques that calculate a score for all the input features (variables) for a given model — the scores simply represent the “importance” of each feature. A higher score means that the specific feature will have a larger effect on the model that is being used to predict the risk.")
     st.pyplot(fig = feat_fig)
 
 with col2:
@@ -92,6 +92,6 @@ with col3:
     st.selectbox("Tuition Fees", ["0-999", "1000-10000", "10000+"])
     st.checkbox("Check the box if you have children")
     st.write(
-        """This is the estimated risk of committing fraud based on the above variables. To understand how this risk is calculated, we encourage you to look at the feature importance of the different variables to the left. \nIf the risk is above 25%, proof of residence is required."""
+        """This is the estimated risk of committing fraud based on the above variables. To understand how this risk is calculated, we encourage you to look at the feature importance of the different variables to the left. \n\nIf the risk is above 25%, proof of residence is required."""
     )
 
