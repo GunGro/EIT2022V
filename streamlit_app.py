@@ -91,4 +91,7 @@ with col3:
     st.text_input("Exp. year of completed educ.", 2024, 4)
     st.selectbox("Tuition Fees", ["0-999", "1000-10000", "10000+"])
     st.checkbox("Check the box if you have children")
+    st.write(
+        """This is the estimated risk of committing fraud based on the above variables. To understand how this risk is calculated, we encourage you to look at the feature importance of the different variables to the left. \nIf the risk is above 25%, proof of residence is required."""
+    )
 
