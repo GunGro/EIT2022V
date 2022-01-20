@@ -19,7 +19,7 @@ col1, col2= st.columns([3, 2])
 with col2:
     st.markdown('## Model Calculator')
 with col1:
-    st.markdown('## Info')
+    st.markdown('')
 
 col1, col2, col3= st.columns([3, 1, 1])
 with col1:
