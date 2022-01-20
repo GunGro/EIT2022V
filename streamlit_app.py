@@ -4,21 +4,21 @@ import streamlit as st
 
 feature_importance = pd.DataFrame(
     {
-        "Number of credits passed": 0.20,
-        "Same muncipality as parents": 0.19,
-        "Age": 0.18,
-        "Annual personal income": 0.12,
-        "Study degree": 0.11,
-        "Country of study": 0.105,
-        "Startup year": 0.09,
-        "Citizenship": 0.085,
-        "Value of personal assests": 0.080,
-        "Family status": 0.075,
-        "Postal code": 0.05,
-        "Sex": 0.03,
-        "Tuition fees": 0.025,
-        "Study subject": 0.02,
-        "Expected year of completed education": 0.015
+        "Number of credits passed": [0.20],
+        "Same muncipality as parents": [0.19],
+        "Age": [ 0.18],
+        "Annual personal income": [ 0.12],
+        "Study degree": [ 0.11],
+        "Country of study": [ 0.105],
+        "Startup year": [ 0.09],
+        "Citizenship": [ 0.085],
+        "Value of personal assests": [ 0.080],
+        "Family status": [ 0.075],
+        "Postal code": [ 0.05],
+        "Sex": [ 0.03],
+        "Tuition fees": [ 0.025],
+        "Study subject": [ 0.02],
+        "Expected year of completed education": [ 0.01],
     }
 )
 
