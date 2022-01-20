@@ -22,8 +22,8 @@ feature_importance = pd.DataFrame(
         "Expected year of completed education": [ 0.01],
     }
 )
-fig = plt.figure()
-ax = plt.add_subplot(1,1,1)
+feat_fig = plt.figure()
+ax = feat_fig.add_subplot(1,1,1)
 feature_importance.plot.barh(ax = ax)
 
 st.set_page_config(layout="wide")
