@@ -68,6 +68,7 @@ In our risk calculator widget to the right, you see the most important variables
 """
     )
     st.markdown("## Feature Importance")
+    st.write("Feature Importance refers to techniques that calculate a score for all the input features for a given model — the scores simply represent the “importance” of each feature. A higher score means that the specific feature will have a larger effect on the model that is being used to predict a certain variable.")
     st.pyplot(fig = feat_fig)
 
 with col2:
