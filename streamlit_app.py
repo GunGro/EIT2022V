@@ -82,7 +82,7 @@ with col2:
 with col3:
     st.selectbox("Sex", ["Male", "Female", "Other"])
     st.selectbox("Country of Study", ["Norway", "Other"])
-    st.selectbox("Family Status", ["Parent", "Child"])
+    st.selectbox("Family Status", ["Parent", "Non-Parent"])
     st.selectbox("Value of personal assets", ["Below 0 NOK", "0 - 100 000 NOK", "100 000 - 400 000 NOK", "Above 400 000 NOK"])
     st.selectbox("Study Subject", ["Natural Sciences", "Economics", "Social Studies", "Engineering", "Philosophy"])
     st.text_input("Exp. year of completed educ.", 2024, 4)
