@@ -76,7 +76,7 @@ with col2:
     st.selectbox("Citizenship", ["Norwegian", "Other"])
     st.text_input("Postal Code", 7000, 4)
     anual_inc = st.selectbox("Annual income", ["0 NOK", "0 - 20 000 NOK", "20 000 - 100 000 NOK", "100 000 - 195 000 NOK", "Above 195 000 NOK"])
-    st.selectbox("Study Degree", ["Bachelor", "Master", "PhD"])
+    st.selectbox("Study Degree", ["Bachelor", "Masters", "PhD"])
     st.text_input("Startup year", 2018, 4)
     st.selectbox("University Credits", ["0-179", "180-300", "300+"])
     st.checkbox("Same municipality as parents")
