@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-import matplotlib as mp
+from matplotlib import pyplot as plt
 
 feature_importance = pd.DataFrame(
     {
@@ -22,7 +22,9 @@ feature_importance = pd.DataFrame(
         "Expected year of completed education": [ 0.01],
     }
 )
-feat_fig = feature_importance.plot.barh()
+fig = plt.figure()
+ax = plt.add_subplot(1,1,1)
+feature_importance.plot.barh(ax = ax)
 
 st.set_page_config(layout="wide")
 
