@@ -4,7 +4,7 @@ import streamlit as st
 from matplotlib import pyplot as plt
 
 feature_importance = pd.DataFrame({
-    'variables': [
+    'Variables': [
         "Number of credits passed",
         "Same muncipality as parents",
         "Age",
@@ -21,7 +21,7 @@ feature_importance = pd.DataFrame({
         "Study subject",
         "Expected year of completed education"
     ],
-    'importance': [
+    'Importance': [
         0.20,
         0.19,
         0.18,
@@ -40,11 +40,13 @@ feature_importance = pd.DataFrame({
     ]
 })
 
-feature_importance.sort_values(by = ['importance'], inplace = True)
+feature_importance.sort_values(by = ['Importance'], inplace = True)
+x_labels = np.linspace(start = 0, end = 0.2, num = 4, enpoint=True)
 
 feat_fig = plt.figure()
 ax = feat_fig.add_subplot(1,1,1)
-feature_importance.plot.barh(x='variables', y='importance', ax = ax)
+ax.set_xticks(x_labels)
+feature_importance.plot.barh(x='Variables', y='Importance', ax = ax)
 
 st.set_page_config(layout="wide")
 
