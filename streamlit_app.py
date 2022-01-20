@@ -47,7 +47,7 @@ feat_fig = plt.figure()
 ax = feat_fig.add_subplot(1,1,1)
 ax.set_xticks(x_labels)
 ax.set_facecolor("#F4F4F4")
-feature_importance.plot.barh(x='Variables', y='Importance', ax = ax, color ="#F4F4F4")
+feature_importance.plot.barh(x='Variables', y='Importance', ax = ax, color ="#410464")
 
 st.set_page_config(layout="wide")
 
