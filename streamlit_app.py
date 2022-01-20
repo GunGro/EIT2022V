@@ -41,7 +41,7 @@ feature_importance = pd.DataFrame({
 })
 
 feature_importance.sort_values(by = ['Importance'], inplace = True)
-x_labels = np.linspace(start = 0, stop = 0.2, num = 4, endpoint=True)
+x_labels = np.linspace(start = 0, stop = 0.2, num = 5, endpoint=True)
 
 feat_fig = plt.figure()
 ax = feat_fig.add_subplot(1,1,1)
