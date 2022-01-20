@@ -54,7 +54,7 @@ st.image('./header_lonekassen.png')
 st.markdown('# Our Use of AI')
 col1, col2= st.columns([3, 2])
 with col2:
-    st.markdown('## Model Calculator')
+    st.markdown('## Risk Calculator')
 with col1:
     st.markdown('')
 
