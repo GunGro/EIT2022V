@@ -42,7 +42,7 @@ In our risk calculator widget to the right, you see the most important variables
 """
     )
     st.markdown("## Feature Importance")
-    st.pyplot(fig = feature_importance.plot.hbar())
+    st.pyplot(fig = feature_importance.plot.barh())
 
 with col2:
     st.text_input("Age", 18, 3)
