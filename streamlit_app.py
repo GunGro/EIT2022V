@@ -58,7 +58,7 @@ with col2:
 with col1:
     st.markdown('')
 
-col1, col2, placeholder, col3= st.columns([3, 1, 0.1, 1])
+col1, placeholder, col2,  col3 = st.columns([3, 0.1, 1, 1])
 with col1:
     st.write("""
     Student loan fraud costs Lånekassen approximately 26 million kroner (2018) a year. In particular, applicants may falsely state that they are living away from home, and thus be eligible for an education grant (stipend). Lånekassen estimates that a recurring 4-5 % of students cannot prove that they’re living away from home. \n
