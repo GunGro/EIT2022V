@@ -3,28 +3,48 @@ import pandas as pd
 import streamlit as st
 from matplotlib import pyplot as plt
 
-feature_importance = pd.DataFrame(
-    {
-        "Number of credits passed": [0.20],
-        "Same muncipality as parents": [0.19],
-        "Age": [ 0.18],
-        "Annual personal income": [ 0.12],
-        "Study degree": [ 0.11],
-        "Country of study": [ 0.105],
-        "Startup year": [ 0.09],
-        "Citizenship": [ 0.085],
-        "Value of personal assests": [ 0.080],
-        "Family status": [ 0.075],
-        "Postal code": [ 0.05],
-        "Sex": [ 0.03],
-        "Tuition fees": [ 0.025],
-        "Study subject": [ 0.02],
-        "Expected year of completed education": [ 0.01],
-    }
-)
+feature_importance = pd.DataFrame({
+    'variables': [
+        "Number of credits passed",
+        "Same muncipality as parents",
+        "Age",
+        "Annual personal income",
+        "Study degree",
+        "Country of study",
+        "Startup year",
+        "Citizenship",
+        "Value of personal assests",
+        "Family status",
+        "Postal code",
+        "Sex",
+        "Tuition fees",
+        "Study subject",
+        "Expected year of completed education"
+    ],
+    'importance': [
+        0.20,
+        0.19,
+        0.18,
+        0.12,
+        0.11,
+        0.105,
+        0.09,
+        0.085,
+        0.080,
+        0.075,
+        0.05,
+        0.03,
+        0.025,
+        0.02,
+        0.015
+    ]
+})
+
+feature_importance.sort_values(by = ['importance'], inplace = True)
+
 feat_fig = plt.figure()
 ax = feat_fig.add_subplot(1,1,1)
-feature_importance.plot.barh(ax = ax)
+feature_importance.plot.barh(x='variables', y='importance', ax = ax)
 
 st.set_page_config(layout="wide")
 
