@@ -51,7 +51,7 @@ feature_importance.plot.barh(x='Variables', y='Importance', ax = ax)
 st.set_page_config(layout="wide")
 
 st.image('./header_lonekassen.png')
-st.markdown('<span style="color:purple"># Our Use of AI </span>')
+st.markdown('# <span style="color:purple">Our Use of AI </span>', unsafe_allow_html=True)
 col1, col2= st.columns([3, 2])
 with col2:
     st.markdown('## Risk Calculator')
