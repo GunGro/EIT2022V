@@ -81,7 +81,7 @@ with col2:
     st.selectbox("University Credits", ["0-180", "180-300", "300+"])
     st.checkbox("Live in the same municipality as parents/primary caregivers")
     risk = np.random.uniform(low = 0, high = 100)
-    st.markdown(f"#  <span style='color:#410464'>Risk</span>: {risk :.1f}%", unsafe_allow_html=True)
+    st.markdown(f"#  <span style='color:#410464'>Risk:</span> {risk :.1f}%", unsafe_allow_html=True)
 with col3:
     st.selectbox("Sex", ["Male", "Female", "Other"])
     st.selectbox("Country of Study", ["Norway", "Other"])
