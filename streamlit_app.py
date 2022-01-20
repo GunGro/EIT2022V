@@ -51,10 +51,10 @@ feature_importance.plot.barh(x='Variables', y='Importance', ax = ax)
 st.set_page_config(layout="wide")
 
 st.image('./header_lonekassen.png')
-st.markdown('# <span style="color:purple">Our Use of AI </span>', unsafe_allow_html=True)
+st.markdown('# <span style="color:#410464">Our Use of AI </span>', unsafe_allow_html=True)
 col1, col2= st.columns([3, 2])
 with col2:
-    st.markdown('## <span style="color:purple"> Risk Calculator</span>', unsafe_allow_html=True)
+    st.markdown('## <span style="color:#410464"> Risk Calculator</span>', unsafe_allow_html=True)
 with col1:
     st.markdown('')
 
@@ -67,7 +67,7 @@ To gain trust with our applicants, we strive to provide insight into how our AI 
 In our risk calculator widget to the right, you see the most important variables in our AI model. To better understand how our model calculates risk, we invite you to manipulate the variables below and see how the risk estimate changes. 
 """
     )
-    st.markdown("## <span style='color:purple'>Feature Importance </span>", unsafe_allow_html=True)
+    st.markdown("## <span style='color:#410464'>Feature Importance </span>", unsafe_allow_html=True)
     st.write("Feature Importance refers to techniques that calculate a score for all the input features (variables) for a given model — the scores simply represent the “importance” of each feature. A higher score means that the specific feature will have a larger effect on the model that is being used to predict the risk.")
     st.pyplot(fig = feat_fig)
 
@@ -81,7 +81,7 @@ with col2:
     st.selectbox("University Credits", ["0-180", "180-300", "300+"])
     st.checkbox("Live in the same municipality as parents/primary caregivers")
     risk = np.random.uniform(low = 0, high = 100)
-    st.markdown(f"#  <span style='color:purple'>Risk</span>: {risk :.1f}%", unsafe_allow_html=True) 
+    st.markdown(f"#  <span style='color:#410464'>Risk</span>: {risk :.1f}%", unsafe_allow_html=True)
 with col3:
     st.selectbox("Sex", ["Male", "Female", "Other"])
     st.selectbox("Country of Study", ["Norway", "Other"])
