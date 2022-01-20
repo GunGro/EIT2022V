@@ -14,7 +14,7 @@ st.set_page_config(layout="wide")
     # unsafe_allow_html=True
 # )
 st.image('./header_lonekassen.png')
-st.markdown('# Model Explanation')
+st.markdown('# Our Use of AI')
 col1, col2= st.columns([3, 2])
 with col2:
     st.markdown('## Model Calculator')
