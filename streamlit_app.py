@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-from matplotlib import pyplot as plt
 
 feature_importance = pd.DataFrame(
     {
@@ -22,9 +21,7 @@ feature_importance = pd.DataFrame(
         "Expected year of completed education": [ 0.01],
     }
 )
-fig = plt.figure()
-ax = fig.add_subplot(1,1,1)
-feature_importance.plot.barh(ax = ax)
+feat_fig = feature_importance.plot.barh()
 
 st.set_page_config(layout="wide")
 
@@ -46,7 +43,7 @@ In our risk calculator widget to the right, you see the most important variables
 """
     )
     st.markdown("## Feature Importance")
-    st.pyplot(fig = feature_importance.plot.barh())
+    st.pyplot(fig = feat_fig)
 
 with col2:
     st.text_input("Age", 18, 3)
