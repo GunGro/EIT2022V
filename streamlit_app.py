@@ -4,7 +4,7 @@ import streamlit as st
 from matplotlib import pyplot as plt
 
 feature_importance = pd.DataFrame({
-    'variables': [
+    'Variables': [
         "Number of credits passed",
         "Same muncipality as parents",
         "Age",
@@ -21,7 +21,7 @@ feature_importance = pd.DataFrame({
         "Study subject",
         "Expected year of completed education"
     ],
-    'importance': [
+    'Importance': [
         0.20,
         0.19,
         0.18,
@@ -40,11 +40,13 @@ feature_importance = pd.DataFrame({
     ]
 })
 
-feature_importance.sort_values(by = ['importance'], inplace = True)
+feature_importance.sort_values(by = ['Importance'], inplace = True)
+x_labels = np.linspace(start = 0, stop = 0.2, num = 5, endpoint=True)
 
 feat_fig = plt.figure()
 ax = feat_fig.add_subplot(1,1,1)
-feature_importance.plot.barh(x='variables', y='importance', ax = ax)
+ax.set_xticks(x_labels)
+feature_importance.plot.barh(x='Variables', y='Importance', ax = ax)
 
 st.set_page_config(layout="wide")
 
@@ -56,7 +58,7 @@ with col2:
 with col1:
     st.markdown('')
 
-col1, col2, col3= st.columns([3, 1, 1])
+col1, placeholder, col2,  col3 = st.columns([3, 0.2, 1, 1])
 with col1:
     st.write("""
     Student loan fraud costs Lånekassen approximately 36 million kroner (2017) a year. In particular, applicants may falsely state that they are living away from home, and thus be eligible for an education grant (stipend). Lånekassen estimates that a recurring 4-5 % of students cannot prove that they’re living away from home. \n
@@ -66,6 +68,7 @@ In our risk calculator widget to the right, you see the most important variables
 """
     )
     st.markdown("## Feature Importance")
+    st.write("Feature Importance refers to techniques that calculate a score for all the input features for a given model — the scores simply represent the “importance” of each feature. A higher score means that the specific feature will have a larger effect on the model that is being used to predict the risk.")
     st.pyplot(fig = feat_fig)
 
 with col2:
@@ -73,7 +76,7 @@ with col2:
     st.selectbox("Citizenship", ["Norwegian", "Other"])
     st.text_input("Postal Code", 7000, 4)
     anual_inc = st.selectbox("Annual income", ["0 NOK", "0 - 20 000 NOK", "20 000 - 100 000 NOK", "100 000 - 195 000 NOK", "Above 195 000 NOK"])
-    st.selectbox("Study Degree", ["Bachelor", "Master", "PhD"])
+    st.selectbox("Study Degree", ["Bachelor", "Masters", "PhD"])
     st.text_input("Startup year", 2018, 4)
     st.selectbox("University Credits", ["0-179", "180-300", "300+"])
     st.checkbox("Same municipality as parents")
