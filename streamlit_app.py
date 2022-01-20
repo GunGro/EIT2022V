@@ -1,18 +1,28 @@
 import numpy as np
+import pandas as ps
 import streamlit as st
+feature_importance = pd.DataFrame(
+    {
+        "Number of credits passed": 0.20,
+        "Same muncipality as parents": 0.19,
+        "Age": 0.18,
+        "Annual personal income": 0.12,
+        "Study degree": 0.11,
+        "Country of study": 0.105,
+        "Startup year": 0.09,
+        "Citizenship": 0.085,
+        "Value of personal assests": 0.080,
+        "Family status": 0.075,
+        "Postal code": 0.05,
+        "Sex": 0.03,
+        "Tuition fees": 0.025,
+        "Study subject": 0.02,
+        "Expected year of completed education": 0.015
+    }
+)
+
 st.set_page_config(layout="wide")
 
-# st.markdown(
-    # """
-    # <style>
-    # .reportview-container {
-        # background: url("https://i.ibb.co/TvmxXHb/Provotype-background-3.png");
-        # background-size: cover;
-    # }
-    # </style>
-    # """,
-    # unsafe_allow_html=True
-# )
 st.image('./header_lonekassen.png')
 st.markdown('# Our Use of AI')
 col1, col2= st.columns([3, 2])
@@ -31,7 +41,7 @@ In our risk calculator widget to the right, you see the most important variables
 """
     )
     st.markdown("## Feature Importance")
-    st.image('./Feature_importance.png')
+    st.pyplot(fig = feature_importance.hbar())
 
 with col2:
     st.text_input("Age", 18, 3)
