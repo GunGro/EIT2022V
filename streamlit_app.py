@@ -43,7 +43,7 @@ feature_importance = pd.DataFrame({
 feature_importance.sort_values(by = ['Importance'], inplace = True)
 x_labels = np.linspace(start = 0, stop = 0.2, num = 5, endpoint=True)
 
-feat_fig = plt.figure()
+feat_fig = plt.figure(facecolor="#F4F4F4")
 ax = feat_fig.add_subplot(1,1,1)
 ax.set_xticks(x_labels)
 ax.set_facecolor("#F4F4F4")
