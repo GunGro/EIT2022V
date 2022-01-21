@@ -5,6 +5,7 @@ from matplotlib import pyplot as plt
 from dummy_model import DummyModel
 from io import BytesIO
 
+@st.experimental_memo
 def get_affect_img(_model, st_dir):
     img = BytesIO()
     fig = _model.create_effects_image(st_dir)
