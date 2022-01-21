@@ -69,7 +69,7 @@ def _study_deg_effect(deg: str):
         return 0.1
     if deg == "Masters":
         return 0.05
-    if deg == "Phd":
+    if deg == "PhD":
         return -0.03
 def _study_subj_effect(subj: str, r = np.random.uniform(-0.01, 0.01, 5)):
     if subj == "Natural Sciences": 
@@ -146,7 +146,7 @@ class DummyModel:
         do_study_in_norway["x"].append(i)
         is_close_to_parents["y"].append(_is_close_to_parents_effect(i))
         is_close_to_parents["x"].append(i)
-    for i in ["Bachelor", "Masters", "Phd"]:
+    for i in ["Bachelor", "Masters", "PhD"]:
         study_deg["y"].append(_study_deg_effect(i))
         study_deg["x"].append(i)
     for i in [
@@ -269,20 +269,21 @@ class DummyModel:
         if state_dict:
             state_dict = self._process_state_dict(state_dict)
             axes[0,0].axvline(x = state_dict["age"], color = "red")
-            axes[0,1].axvline(x = state_dict["is_male"], color = "red")
-            axes[0,2].axvline(x = state_dict["is_norwegain"], color = "red")
-            axes[0,3].axvline(x = state_dict["do_study_in_norway"], color = "red")
-            axes[0,4].axvline(x = state_dict["is_close_to_parents"], color = "red")
-            axes[1,0].axvline(x = state_dict["annual_inc"], color = "red")
-            axes[1,1].axvline(x = state_dict["net_worth"], color = "red")
+            axes[0,1].axvline(x = not state_dict["is_male"], color = "red")
+            axes[0,2].axvline(x = not state_dict["is_norwegain"], color = "red")
+            axes[0,3].axvline(x = not state_dict["do_study_in_norway"], color = "red")
+            axes[0,4].axvline(x = not state_dict["is_close_to_parents"], color = "red")
+
+            axes[1,0].axvline(x = self.annual_inc["x"].index(state_dict["annual_inc"]), color = "red")
+            axes[1,1].axvline(x = self.net_worth["x"].index(state_dict["net_worth"]), color = "red")
             axes[1,2].axvline(x = state_dict["post_code"]//1000, color = "red")
-            axes[1,3].axvline(x = state_dict["study_deg"], color = "red")
-            axes[1,4].axvline(x = state_dict["study_subj"], color = "red")
+            axes[1,3].axvline(x = self.study_deg["x"].index(state_dict["study_deg"]), color = "red")
+            axes[1,4].axvline(x = self.study_subj["x"].index(state_dict["study_subj"]), color = "red")
             axes[2,0].axvline(x = state_dict["year_start"], color = "red")
             axes[2,1].axvline(x = state_dict["year_finish"], color = "red")
-            axes[2,2].axvline(x = state_dict["uni_cred"], color = "red")
-            axes[2,3].axvline(x = state_dict["tuition_fee"], color = "red")
-            axes[2,4].axvline(x = state_dict["has_children"], color = "red")
+            axes[2,2].axvline(x = self.uni_cred["x"].index(state_dict["uni_cred"]), color = "red")
+            axes[2,3].axvline(x = self.tuition_fee["x"].index(state_dict["tuition_fee"]), color = "red")
+            axes[2,4].axvline(x = not state_dict["has_children"], color = "red")
         return fig
 
 

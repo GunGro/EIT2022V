@@ -5,6 +5,12 @@ from matplotlib import pyplot as plt
 from dummy_model import DummyModel
 from io import BytesIO
 
+def get_affect_img(_model, st_dir):
+    img = BytesIO()
+    fig = _model.create_effects_image(st_dir)
+    fig.savefig(img, format = "png", facecolor="#F4F4F4")
+    return img
+
 feature_importance = pd.DataFrame({
     'Variables': [
         "Number of credits passed",
@@ -52,7 +58,7 @@ ax.set_facecolor("#F4F4F4")
 feature_importance.plot.barh(x='Variables', y='Importance', ax = ax, color ="#410464")
 
 st.set_page_config(layout="wide")
-do_randomization = st.sidebar.checkbox("Use random risk calculation")
+do_deterministic = st.sidebar.checkbox("Use deterministic risk calculation")
 
 st.image('./header_english.png')
 col1, col2= st.columns([3, 2])
@@ -95,7 +101,7 @@ with col3:
     st_dir["is_parent"] = st.checkbox("Check the box if you have children")
 
 with col2:
-    if do_randomization:
+    if not do_deterministic:
         risk = np.random.uniform(low = 0, high = 100)
     else:
         model = DummyModel()
@@ -104,10 +110,11 @@ with col2:
     st.write(
         """This is the estimated risk of committing fraud based on the above variables. To understand how this risk is calculated, we encourage you to look at the feature importance of the different variables to the left. \n\nIf the risk is above 25%, proof of residence is required."""
     )
-if not do_randomization:
+if do_deterministic:
     with col1:
-        buf = BytesIO()
-        fig = model.create_effects_image(st_dir)
-        fig.savefig(buf, format = "png", facecolor="#F4F4F4")
+        img = get_affect_img(model, st_dir)
+        st.image(img)
 
-        st.image(buf)
+
+
+    
