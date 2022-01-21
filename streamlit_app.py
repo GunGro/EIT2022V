@@ -121,10 +121,11 @@ In our risk calculator widget to the right, you see the most important variables
     col1, col2= st.columns([3, 2])
     with col2:
         st.markdown('## <span style="color:#410464"> Risk Calculator</span>', unsafe_allow_html=True)
+    with col1:
+        st.markdown("## <span style='color:#410464'>Feature Importance </span>", unsafe_allow_html=True)
 
     col1, placeholder, col2,  col3 = st.columns([3, 0.2, 1, 1])
     with col1:
-        st.markdown("## <span style='color:#410464'>Feature Importance </span>", unsafe_allow_html=True)
         st.write("Feature Importance refers to techniques that calculate a score for all the input features (variables) for a given model — the scores simply represent the “importance” of each feature. A higher score means that the specific feature will have a larger effect on the model that is being used to predict the risk.")
         st.pyplot(fig = feat_fig, facecolor="#F4F4F4")
 
