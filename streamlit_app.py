@@ -96,15 +96,15 @@ with col3:
     st_dir["is_parent"] = st.checkbox("Check the box if you have children")
 
 with col2:
-    st.write(
-        """This is the estimated risk of committing fraud based on the above variables. To understand how this risk is calculated, we encourage you to look at the feature importance of the different variables to the left. \n\nIf the risk is above 25%, proof of residence is required."""
-    )
     if do_randomization:
         risk = np.random.uniform(low = 0, high = 100)
     else:
         model = DummyModel()
         risk = model.get_model_output(st_dir) #np.random.uniform(low = 0, high = 100)
     st.markdown(f"#  <span style='color:#410464'>Risk:</span> {risk :.1f}%", unsafe_allow_html=True)
+    st.write(
+        """This is the estimated risk of committing fraud based on the above variables. To understand how this risk is calculated, we encourage you to look at the feature importance of the different variables to the left. \n\nIf the risk is above 25%, proof of residence is required."""
+    )
 if not do_randomization:
     with col1:
         buf = BytesIO()
