@@ -55,12 +55,11 @@ st.set_page_config(layout="wide")
 do_randomization = st.sidebar.checkbox("Use random risk calculation")
 
 st.image('./header_english.png')
-st.markdown('# <span style="color:#410464">Our use of AI </span>', unsafe_allow_html=True)
 col1, col2= st.columns([3, 2])
 with col2:
     st.markdown('## <span style="color:#410464"> Risk Calculator</span>', unsafe_allow_html=True)
 with col1:
-    st.markdown('')
+    st.markdown('# <span style="color:#410464">Our use of AI </span>', unsafe_allow_html=True)
 
 col1, placeholder, col2,  col3 = st.columns([3, 0.2, 1, 1])
 with col1:
