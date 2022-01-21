@@ -246,7 +246,7 @@ class DummyModel:
 
 
     def create_effects_image(self, state_dict = {}):
-        fig, axes = plt.subplots(figsize = (20,15),  nrows = 3, ncols=5)#, sharey=True)
+        fig, axes = plt.subplots(figsize = (20,15),  nrows = 3, ncols=5, sharey=True)
 
         pd.DataFrame(self.age).plot("x", "y", ax = axes[0,0], legend = False, title="Age", xlabel = '', fontsize = 12, color ="#410464")
         pd.DataFrame(self.is_male).plot.bar("x", "y", ax = axes[0,1], legend = False, title = "Sex", xlabel = '', fontsize = 12, color ="#410464")
