@@ -6,7 +6,6 @@ from dummy_model import DummyModel
 from io import BytesIO
 
 # hei
-# Bøøøø
 
 @st.experimental_memo
 def get_affect_img(_model, st_dir):
