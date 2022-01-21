@@ -113,6 +113,8 @@ with col2:
     )
 if do_deterministic:
     with col1:
+        st.markdown('## <span style="color:#410464"> Effect Plot </span>', unsafe_allow_html=True)
+        st.write("The average estimated affect each variable has. Is the percent increase or decrease in odds is provided for each variable. Odds is defined as the ratio between the probabilities of having a positive and negative result.")
         img = get_affect_img(model, st_dir)
         st.image(img)
 
