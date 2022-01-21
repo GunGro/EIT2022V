@@ -94,11 +94,11 @@ with col3:
     st_dir["finish"] = st.text_input("Exp. year of completed educ.", 2024, 4)
     st_dir["fee"] = st.selectbox("Tuition Fees", ["0 - 999 NOK", "1000 - 10 000 NOK", "Above 10 000 NOK"])
     st_dir["is_parent"] = st.checkbox("Check the box if you have children")
+
+with col2:
     st.write(
         """This is the estimated risk of committing fraud based on the above variables. To understand how this risk is calculated, we encourage you to look at the feature importance of the different variables to the left. \n\nIf the risk is above 25%, proof of residence is required."""
     )
-
-with col2:
     if do_randomization:
         risk = np.random.uniform(low = 0, high = 100)
     else:
