@@ -10,11 +10,10 @@ st.set_page_config(
 
 st.image('./header_english.png')
 
-st.markdown('## <span style="color:#410464"> Risk Calculator</span>', unsafe_allow_html=True)
-
 col1, col2, col3, col4 = st.columns(4)
 st_dir = {}
 with col2:
+    st.markdown('## <span style="color:#410464"> Risk Calculator</span>', unsafe_allow_html=True)
     st_dir["age"] = st.text_input("Age", 18, 3)
     st_dir["citizen"] = st.selectbox("Citizenship", ["Norwegian", "Other"])
     st_dir["postal"] = st.text_input("Postal Code", 7000, 4)
