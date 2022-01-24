@@ -23,6 +23,7 @@ with col2:
     st_dir["cred"] = st.selectbox("University Credits", ["0-180", "180-300", "300+"])
     st_dir["with_parent"] = st.checkbox("Live in the same municipality as parents/primary caregivers")
 with col3:
+    st.markdown('## <span style="color:#410464"></span>', unsafe_allow_html=True)
     st_dir["sex"] = st.selectbox("Sex", ["Male", "Female", "Other"])
     st_dir["country"] = st.selectbox("Country of Study", ["Norway", "Other"])
     st.selectbox("Family Status", ["Single", "Cohabitant", "Married"])
