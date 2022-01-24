@@ -4,6 +4,10 @@ import streamlit as st
 from dummy_model import DummyModel
 from io import BytesIO
 
+st.set_page_config(
+        layout="wide"
+)
+
 st.image('./header_english.png')
 
 st.markdown('## <span style="color:#410464"> Risk Calculator</span>', unsafe_allow_html=True)
