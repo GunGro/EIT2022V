@@ -17,4 +17,4 @@ with col2:
     """
         )
 
-        st.write("[Klikk her for kalkulator](https://share.streamlit.io/gungro/eit2022v/page2)")
+        st.write("[Click here for the calculator](https://share.streamlit.io/gungro/eit2022v/page2)")
