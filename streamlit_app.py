@@ -62,7 +62,7 @@ with col2:
         Now that you have received your risk estimate, we want you to gain insight into how our AI suggests high-risk cases. To this end, we have calculated an importance score or feature importance for each variable used by our AI in determining the risk estimate.
         A feature (variable) with a high score means that this feature will have a large effect on the final risk assessment. A plot displaying the feature importance of all included features is included below. From this, we see that the variables number of credits passed and same municipality as parents are most influential. """)
         st.header("Feature importance plot")
-    	st.pyplot(fig = feat_fig, facecolor="#F4F4F4")
+        st.pyplot(fig = feat_fig, facecolor="#F4F4F4")
         st.write("""However, feature importance does not tell us how each feature affects the risk assessment. That is, whether an increase in the feature increases or decreases the risk assessment. Therefore, we also provide an effect plot below.
         This shows how much and in which direction the different values of each feature affects the risk assessment. [further explanation of the red lines, etc., depending on what we include] From this, we see that individuals who have passed more credits generally are more likely to commit fraud (?). """)
         st.header("Effect plot")
