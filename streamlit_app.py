@@ -11,7 +11,7 @@ def local_css(file_name):
 
 local_css('./style.css')
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns([0.5, 1, 0.5])
 
 with col2:
     st.markdown('# <span style="color:#410464"> Lånekassens AI</span>', unsafe_allow_html=True)
