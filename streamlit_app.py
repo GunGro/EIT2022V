@@ -48,7 +48,8 @@ with col2:
     )
 
 with col3:
-    if st.button('Model explanation'):
+    st.write("\n\n\n")
+    if st.button('Model Explanation'):
         js = "window.open('https://share.streamlit.io/gungro/eit2022v/page3')"  # New tab or window
         html = '<img src onerror="{}">'.format(js)
         div = Div(text=html)
