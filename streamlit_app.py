@@ -69,7 +69,7 @@ with col2:
         st.write("Although we are able to understand what input contributes to your risk, we can only be sure of what direction your inputs affect your risk with an effect plot. This shows how much, and in which direction, the different values of each input on average affects the risk assessment. \n\nAn example of one such effect plot of passed university credits is provided below. This shows how much and in which direction the different values of the passed university credits on average affect the risk assessment. From this, we see that individuals who have passed more credits generally are less likely to commit fraud.")
         st.image("./uni_cred.png")
         st.markdown('## <span style="color:#410464">Feedback!</span>', unsafe_allow_html=True)
-        st.write("We hope this provides you with an understanding of the effects of each variable, in the calculation of your risk profile. We wish to give our users the best possible explanation of our AI. If you feel like something is inadequate or missing, we encourage you to send us feedback.")
+        st.write("We hope this provides you with an understanding of the model used in the calculation of your risk profile. We wish to give our users the best possible explanation of our AI. If you feel like something is inadequate or missing, we encourage you to send us feedback.")
  
         st.write("[Give feedback!](https://share.streamlit.io/gungro/eit2022v)")
 
