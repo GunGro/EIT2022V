@@ -1,4 +1,5 @@
 import streamlit as st
+from bokeh.models.widgets import Div
 
 st.set_page_config(
         layout="wide"
@@ -17,4 +18,9 @@ with col2:
     """
         )
 
-        st.write("[Click here for the calculator](https://share.streamlit.io/gungro/eit2022v/page2)")
+
+        if st.button('Model explanation'):
+        js = "window.open('https://share.streamlit.io/gungro/eit2022v/page3')"  # New tab or window
+        html = '<img src onerror="{}">'.format(js)
+        div = Div(text=html)
+        st.bokeh_chart(div)
