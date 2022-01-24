@@ -4,7 +4,6 @@ import streamlit as st
 from dummy_model import DummyModel
 from io import BytesIO
 
-st.set_page_config(layout="wide")
 st.image('./header_english.png')
 
 st.markdown('## <span style="color:#410464"> Risk Calculator</span>', unsafe_allow_html=True)
@@ -38,5 +37,6 @@ with col1:
         """This is the estimated risk of committing fraud based on the above variables. To understand how this risk is calculated, we encourage you to look at the feature importance of the different variables to the left. \n\nIf the risk is above 25%, proof of residence is required."""
     )
 
-
+with col2:
+    st.write("[Klikk her for kalkulator forklaringer](https://share.streamlit.io/gungro/eit2022v/page3)")
 
