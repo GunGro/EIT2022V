@@ -65,8 +65,9 @@ with col2:
 
         st.pyplot(fig = feat_fig, facecolor="#F4F4F4")
         st.markdown('## <span style="color:#410464">Effect plot</span>', unsafe_allow_html=True)
-        st.write("""However, feature importance does not tell us how each feature affects the risk assessment. That is, whether an increase in the feature increases or decreases the risk assessment. Therefore, we may also provide effect plots. An example of one such effect plot of the passed university credits is provided below.
-        This shows how much and in which direction the different values of of the passed university credits on average effect the risk assessment. From this, we see that individuals who have passed more credits generally are less likely to commit fraud.""")
+        st.write("Although we are able to understand what input contributes to your risk, we can only be sure of what direction your inputs affect your risk with an effect plot. This shows how much, and in which direction, the different values of each input on average affects the risk assessment. \n
+An example of one such effect plot of passed university credits is provided below. This shows how much and in which direction the different values of the passed university credits on average affect the risk assessment. From this, we see that individuals who have passed more credits generally are less likely to commit fraud.
+")
         st.image("./uni_cred.png")
         st.write("""Regrettably, the above concepts cannot explain how you got your particular risk assessment. The first limitation stems directly from feature importance. When each feature is assigned an importance score, these scores cannot communicate how the different features interact and are related to each other. As a simple example, say that the AI learned that men studying philosophy are particularly likely to commit fraud. This trivial relationship cannot be detected from feature importance alone. The second limitation stems from the fact that the above explanation applies equally well to everyone. To understand why you got your particular risk score, we must take your particular case into account.
         We are actively discussing how to adapt this page to best suit the needs of our users. To do this, we need your feedback. 
