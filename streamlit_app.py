@@ -43,7 +43,6 @@ with col2:
     )
 
 with col3:
-    st.write("[Click here for an explanation](https://share.streamlit.io/gungro/eit2022v/page3)")
     if st.button('Model explanation'):
         js = "window.open('https://share.streamlit.io/gungro/eit2022v/page3')"  # New tab or window
         html = '<img src onerror="{}">'.format(js)
