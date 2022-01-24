@@ -66,11 +66,11 @@ def _postal_code_effect(
         return r[9]
 def _study_deg_effect(deg: str):
     if deg == "Bachelor":
-        return 0.1
+        return 0.2
     if deg == "Masters":
-        return 0.05
+        return 0.15
     if deg == "PhD":
-        return -0.03
+        return -0.13
 def _study_subj_effect(subj: str, r = np.random.uniform(-0.01, 0.01, 5)):
     if subj == "Natural Sciences": 
         return r[0]
@@ -95,11 +95,11 @@ def _year_finish_effect(
     return r[finish - 2016]
 def _uni_cred_effect(cred: str):
     if cred == "0-180":
-        return 0.30
+        return 0.45
     if cred == "180-300":
-        return 0.17
+        return 0.27
     if cred == "300+":
-        return -0.18
+        return -0.19
 def _tuition_fee_effect(
     fee: str,
     r = np.random.uniform(-0.01, 0.01, 3)
