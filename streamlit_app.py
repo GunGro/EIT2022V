@@ -11,8 +11,9 @@ st.set_page_config(
 st.image('./header_english.png')
 
 st.markdown('## <span style="color:#410464"> Risk Calculator</span>', unsafe_allow_html=True)
+st.title("Risk Calculator", col3)
 
-col1,  col2, col3, col4 = st.columns(4)
+col1, col2, col3, col4, col5 = st.columns(5)
 st_dir = {}
 with col2:
     st_dir["age"] = st.text_input("Age", 18, 3)
@@ -23,7 +24,7 @@ with col2:
     st_dir["start"] = st.text_input("Year of degree start", 2018, 4)
     st_dir["cred"] = st.selectbox("University Credits", ["0-180", "180-300", "300+"])
     st_dir["with_parent"] = st.checkbox("Live in the same municipality as parents/primary caregivers")
-with col3:
+with col4:
     st_dir["sex"] = st.selectbox("Sex", ["Male", "Female", "Other"])
     st_dir["country"] = st.selectbox("Country of Study", ["Norway", "Other"])
     st.selectbox("Family Status", ["Single", "Cohabitant", "Married"])
