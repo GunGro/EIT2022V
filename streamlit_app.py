@@ -61,7 +61,7 @@ with col2:
         Now that you have received your risk estimate, we want you to gain insight into how our AI suggests high-risk cases. To this end, we have calculated an importance score or feature importance for each variable used by our AI in determining the risk estimate.
         A feature (variable) with a high score means that this feature will have a large effect on the final risk assessment. A plot displaying the feature importance of all included features is included below. From this, we see that the variables number of credits passed and same municipality as parents are most influential. On the other side, features like sex and study subject are of low importance. This is comforting, as high values of these features could yield a bias model.""")
         #st.header("Feature importance plot")
-        st.markdown('## <span style="color:#410464">Feature importance plot</span>', unsafe_allow_html=True)
+        st.markdown('## <span style="color:#410464">Importance plot</span>', unsafe_allow_html=True)
 
         st.pyplot(fig = feat_fig, facecolor="#F4F4F4")
         st.markdown('## <span style="color:#410464">Effect plot</span>', unsafe_allow_html=True)
