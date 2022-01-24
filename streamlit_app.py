@@ -38,5 +38,5 @@ with col1:
     )
 
 with col2:
-    st.write("[Klikk her for kalkulator forklaringer](https://share.streamlit.io/gungro/eit2022v/page3)")
+    st.write("[Click here for explanation](https://share.streamlit.io/gungro/eit2022v/page3)")
 
