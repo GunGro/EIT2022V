@@ -2,8 +2,6 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 from matplotlib import pyplot as plt
-from dummy_model import DummyModel
-from io import BytesIO
 
 feature_importance = pd.DataFrame({
     'Variables': [
