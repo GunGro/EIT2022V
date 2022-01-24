@@ -95,11 +95,11 @@ def _year_finish_effect(
     return r[finish - 2016]
 def _uni_cred_effect(cred: str):
     if cred == "0-180":
-        return 0.10
+        return 0.30
     if cred == "180-300":
-        return 0.05
+        return 0.17
     if cred == "300+":
-        return -0.08
+        return -0.18
 def _tuition_fee_effect(
     fee: str,
     r = np.random.uniform(-0.01, 0.01, 3)
