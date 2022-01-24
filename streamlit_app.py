@@ -52,7 +52,7 @@ feature_importance.plot.barh(x='Variables', y='Importance', ax = ax, color ="#41
 st.set_page_config(layout="wide")
 st.image('./header_english.png')
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns([0.5, 1, 0.5])
  
 with col2:
         st.header("Lånekassens AI")
