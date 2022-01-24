@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
-import webbrowser
 from dummy_model import DummyModel
 from io import BytesIO
 
@@ -45,5 +44,8 @@ with col2:
 with col3:
     st.write("[Click here for an explanation](https://share.streamlit.io/gungro/eit2022v/page3)")
     if st.button('Model explanation'):
-        webbrowser.open_new_tab("https://share.streamlit.io/gungro/eit2022v/page3")
+        js = "window.open('https://share.streamlit.io/gungro/eit2022v/page3')"  # New tab or window
+        html = '<img src onerror="{}">'.format(js)
+        div = Div(text=html)
+        st.bokeh_chart(div)
 
