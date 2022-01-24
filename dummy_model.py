@@ -33,11 +33,11 @@ def _annual_inc_effect(annual_inc: str):
         return 1
 def _net_worth_effect(net_worth: str):
     if net_worth == "Below 0 NOK":
-        return 0.02
+        return 0.07
     if net_worth == "0 - 100 000 NOK":
-        return 0.01
+        return 0.06
     if net_worth == "100 000 - 400 000 NOK":
-        return -0.03
+        return -0.08
     if net_worth == "Above 400 000 NOK":
         return 0.75
 def _postal_code_effect(
