@@ -42,5 +42,5 @@ with col2:
     )
 
 with col3:
-    st.write("[Click here for explanation](https://share.streamlit.io/gungro/eit2022v/page3)")
+    st.write("[Click here for an explanation](https://share.streamlit.io/gungro/eit2022v/page3)")
 
