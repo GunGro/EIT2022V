@@ -259,7 +259,7 @@ class DummyModel:
         pd.DataFrame(self.study_deg).plot.bar("x", "y", ax = axes[1,3], legend = False, title = "Study Degree", xlabel = '', fontsize = 12, color ="#410464")
         pd.DataFrame(self.study_subj).plot.bar("x", "y", ax = axes[1,4], legend = False, title = "Study Subject", xlabel = '', fontsize = 12, color ="#410464")
         pd.DataFrame(self.year_start).plot("x", "y", ax = axes[2,0], legend = False, title = "Year of Study Start", xlabel = '', fontsize = 12, color ="#410464")
-        pd.DataFrame(self.year_finish).plot("x", "y", ax = axes[2,1], legend = False, title = "Year of Study Finsih", xlabel = '', fontsize = 12, color ="#410464")
+        pd.DataFrame(self.year_finish).plot("x", "y", ax = axes[2,1], legend = False, title = "Year of Study Finish", xlabel = '', fontsize = 12, color ="#410464")
         pd.DataFrame(self.uni_cred).plot.bar("x", "y", ax = axes[2,2], legend = False, title = "Univercity Credits", xlabel = '', fontsize = 12, color ="#410464")
         pd.DataFrame(self.tuition_fee).plot.bar("x", "y", ax = axes[2,3], legend = False, title = "Tuition Fee", xlabel = '', fontsize = 12, color ="#410464")
         pd.DataFrame(self.has_children).plot.bar("x", "y", ax = axes[2,4], legend = False, title = "Is a Parent", xlabel = '', fontsize = 12, color ="#410464")
