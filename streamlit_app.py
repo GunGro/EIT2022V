@@ -66,7 +66,7 @@ with col2:
         st.pyplot(fig = feat_fig, facecolor="#F4F4F4")
         st.write("""However, feature importance does not tell us how each feature affects the risk assessment. That is, whether an increase in the feature increases or decreases the risk assessment. Therefore, we also provide an effect plot below.
         This shows how much and in which direction the different values of each feature affects the risk assessment. [further explanation of the red lines, etc., depending on what we include] From this, we see that individuals who have passed more credits generally are more likely to commit fraud (?). """)
-        st.markdown('## <span style="color:#410464">Effect plot</span>', unsafe_allow_html=True)
+        # st.markdown('## <span style="color:#410464">Effect plot</span>', unsafe_allow_html=True)
         #st.header("Effect plot")
         # st.image("./effect_plot.png")
         # st.write("""We hope this provides you with an understanding of the contribution of each variable, in the calculation of your risk profile. """)
