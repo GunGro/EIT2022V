@@ -11,7 +11,7 @@ st.set_page_config(
 st.image('./header_english.png')
 
 st.markdown('## <span style="color:#410464"> Risk Calculator</span>', unsafe_allow_html=True)
-st.title("Risk Calculator", col3)
+st.title("Risk Calculator", anchor=col3)
 
 col1, col2, col3, col4, col5 = st.columns(5)
 st_dir = {}
