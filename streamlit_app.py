@@ -38,7 +38,7 @@ with col2:
     risk = model.get_model_output(st_dir)
     st.markdown(f"#  <span style='color:#410464'>Risk:</span> {risk :.1f}%", unsafe_allow_html=True)
     st.write(
-        """This is the estimated risk of committing fraud based on the above variables. To understand how this risk is calculated, we encourage you to look at the feature importance of the different variables to the left. \n\nIf the risk is above 25%, proof of residence is required."""
+        """This is the estimated risk of committing fraud based on the above variables. To understand how this risk is calculated, we encourage you to click the button to the right. \n\nIf the risk is above 25%, proof of residence is required."""
     )
 
 with col3:
