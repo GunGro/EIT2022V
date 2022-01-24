@@ -12,9 +12,9 @@ st.image('./header_english.png')
 
 st.markdown('## <span style="color:#410464"> Risk Calculator</span>', unsafe_allow_html=True)
 
-col1,  col2 = st.columns([1, 1])
+col1,  col2, col3, col4 = st.columns([4])
 st_dir = {}
-with col1:
+with col2:
     st_dir["age"] = st.text_input("Age", 18, 3)
     st_dir["citizen"] = st.selectbox("Citizenship", ["Norwegian", "Other"])
     st_dir["postal"] = st.text_input("Postal Code", 7000, 4)
@@ -23,7 +23,7 @@ with col1:
     st_dir["start"] = st.text_input("Year of degree start", 2018, 4)
     st_dir["cred"] = st.selectbox("University Credits", ["0-180", "180-300", "300+"])
     st_dir["with_parent"] = st.checkbox("Live in the same municipality as parents/primary caregivers")
-with col2:
+with col3:
     st_dir["sex"] = st.selectbox("Sex", ["Male", "Female", "Other"])
     st_dir["country"] = st.selectbox("Country of Study", ["Norway", "Other"])
     st.selectbox("Family Status", ["Single", "Cohabitant", "Married"])
@@ -34,13 +34,13 @@ with col2:
     st_dir["is_parent"] = st.checkbox("Check the box if you have children")
 
 model = DummyModel()
-with col1:
+with col2:
     risk = model.get_model_output(st_dir)
     st.markdown(f"#  <span style='color:#410464'>Risk:</span> {risk :.1f}%", unsafe_allow_html=True)
     st.write(
         """This is the estimated risk of committing fraud based on the above variables. To understand how this risk is calculated, we encourage you to look at the feature importance of the different variables to the left. \n\nIf the risk is above 25%, proof of residence is required."""
     )
 
-with col2:
+with col3:
     st.write("[Click here for explanation](https://share.streamlit.io/gungro/eit2022v/page3)")
 
