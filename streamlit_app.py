@@ -52,7 +52,7 @@ with col3:
     st.write("\n\n\n")
     st.write("\n\n\n")
     st.write("\n\n\n")
-    if st.button('Model Explanation'):
+    if st.button('Explain my risk'):
         js = "window.open('https://share.streamlit.io/gungro/eit2022v/page3')"  # New tab or window
         html = '<img src onerror="{}">'.format(js)
         div = Div(text=html)
