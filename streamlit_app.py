@@ -20,7 +20,7 @@ with col2:
 
 
         if st.button('Model explanation'):
-        js = "window.open('https://share.streamlit.io/gungro/eit2022v/page3')"  # New tab or window
-        html = '<img src onerror="{}">'.format(js)
-        div = Div(text=html)
-        st.bokeh_chart(div)
+                js = "window.open('https://share.streamlit.io/gungro/eit2022v/page3')"  # New tab or window
+                html = '<img src onerror="{}">'.format(js)
+                div = Div(text=html)
+                st.bokeh_chart(div)
