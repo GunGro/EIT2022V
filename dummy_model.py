@@ -117,7 +117,7 @@ def _has_children_effect(has_children: bool):
         return -0.01
 
 class DummyModel:
-    base_line_odds = 0.35/0.65 # procent to be positive divided by percent to be negative
+    base_line_odds = 0.50/0.50 # procent to be positive divided by percent to be negative
 
     age = {"x": [], "y": []}
     is_male = {"x": [], "y": []}
