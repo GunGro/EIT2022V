@@ -24,7 +24,8 @@ To promote responsible and transparent use of AI we allow users to calculate the
     )
 
     if st.button('Calculate your risk!'):
-            js = "window.open('https://share.streamlit.io/gungro/eit2022v/page2')"  # New tab or window
-            html = '<img src onerror="{}">'.format(js)
-            div = Div(text=html)
-            st.bokeh_chart(div)
+        # js = "window.open('https://share.streamlit.io/gungro/eit2022v/page2')"  # New tab or window
+        js = "window.location.href = 'https://www.streamlit.io/'"  # Current tab
+        html = '<img src onerror="{}">'.format(js)
+        div = Div(text=html)
+        st.bokeh_chart(div)
